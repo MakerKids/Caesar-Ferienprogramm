@@ -8,7 +8,7 @@ schluessel = input('Bitte gib den Schlüssel ein: ')
 while not schluessel.isdigit():
     print('Das ist keine gültige Zahl!')
     schluessel = input('Bitte gib den Schlüssel ein: ')
-schluessel = 26-int(schluessel)
+schluessel = len(alphabet)-int(schluessel)
 
 text = text.lower().replace('ä','ae').replace('ö','oe').replace('ü','ue').replace('ß','sz').lower()
 
