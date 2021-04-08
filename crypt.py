@@ -8,15 +8,10 @@ while not (method == '0' or method == '1' or method == ''):
 	method = input('Drücke [0] um zu verschlüsseln, [1] um zu entschlüsseln und [Enter], um abzubrechen: ')
 if method == '':
 	exit()
+if method == '0':
+	text = input('Bitte gib den Text ein, der verschlüsselt werden soll: ')
 else:
-	if method == '0':
-		a = 1
-		b = 0
-		text = input('Bitte gib den Text ein, der verschlüsselt werden soll: ')
-	else:
-		a = 0
-		b = 1
-		text = input('Bitte gib den Text ein, der entschlüsselt werden soll: ')
+	text = input('Bitte gib den Text ein, der entschlüsselt werden soll: ')
 
 
 schluessel = input('Bitte gib den Schlüssel ein: ')
@@ -33,7 +28,7 @@ for zeichen in text:
 text = x
 
 for zeichen in text:
-    y = y+alphabet[((alphabet.index(zeichen)+schluessel)*a+(alphabet.index(zeichen)-schluessel)*b)%len(alphabet)]
+    y = y+alphabet[((alphabet.index(zeichen)+schluessel)*(method == '0')+(alphabet.index(zeichen)-schluessel)*(method == '1'))%len(alphabet)]
 text = y
 
 print(text)
