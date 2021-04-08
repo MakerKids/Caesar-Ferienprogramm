@@ -1,6 +1,6 @@
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
-x = ""
-y = ""
+x = ''
+y = ''
 
 text = input('Bitte gib den Text ein, der entschlüsselt werden soll: ')
 
