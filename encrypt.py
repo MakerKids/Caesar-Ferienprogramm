@@ -1,6 +1,6 @@
 alphabet = 'abcdefghijklmnopqrstuvwxyz'
-x = ""
-y = ""
+x = ''
+y = ''
 
 text = input('Bitte gib den Text ein, der verschlüsselt werden soll: ')
 
@@ -16,13 +16,8 @@ for zeichen in text:
     if zeichen in alphabet:
         x = x+zeichen
 text = x
-
 for zeichen in text:
-    a = alphabet.index(zeichen)
-    a = a+schluessel
-    a = a%len(alphabet)
-    a = alphabet[a]
-    y = y+a
+    y = y+alphabet[(alphabet.index(zeichen)+schluessel)*b%len(alphabet)]
 text = y
 
 print(text)
