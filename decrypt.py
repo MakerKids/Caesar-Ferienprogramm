@@ -18,11 +18,7 @@ for zeichen in text:
 text = x
 
 for zeichen in text:
-    a = alphabet.index(zeichen)
-    a = a-schluessel
-    a = a%len(alphabet)
-    a = alphabet[a]
-    y = y+a
+    y = y+alphabet[(alphabet.index(zeichen)-schluessel)*b%len(alphabet)]
 text = y
 
 print(text)
